@@ -12,8 +12,7 @@ let question = "";
 let correctAnswer = "";
 let candidateAnswer = "";
 let passFail = '';
-let grade = 0;
-let counter = 0;
+
 
 
 function askForName() {
@@ -33,6 +32,8 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   //console.log(candidateAnswers);
+  let grade = 0;
+  let counter = 0;
   console.log(`Candidate Name: ${candidateName}`);
   for (let i = 0; i < questions.length; i++) {
     console.log(`${questions[i]} 
@@ -52,7 +53,6 @@ function gradeQuiz(candidateAnswers) {
   }
   console.log(`>>> Overall Grade: ${grade}% (${counter} of 5 responses correct <<<
     >>> Status: ${passFail} <<<`);
-    console.log(typeof grade);
   
   return grade;
 }
